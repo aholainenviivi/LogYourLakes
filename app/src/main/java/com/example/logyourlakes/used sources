@@ -1,0 +1,17 @@
+If Java file is mentioned, I've also used the resource in corresponding XML file(s).
+
+For recycled recyclerview card layout in BrowseLakesActivity, Lake and LakeAdapter:
+https://www.geeksforgeeks.org/cardview-using-recyclerview-in-android-with-example/
+
+For searchview in SearchLakesActivity:
+https://www.tutorialspoint.com/how-to-use-searchview-in-android
+
+For switching activities and passing variables between activities:
+https://youtu.be/eL69kj-_Wvs
+https://www.tutorialspoint.com/how-to-pass-values-from-one-activity-to-another-in-android
+
+For expandable cardview in LakeInfoActivity.java
+https://www.geeksforgeeks.org/how-to-create-an-expandable-cardview-in-android/
+
+For spinners in AddActivity.java
+https://www.tutorialspoint.com/android/android_spinner_control.htm

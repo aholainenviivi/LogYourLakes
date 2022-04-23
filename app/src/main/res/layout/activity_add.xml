@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:animateLayoutChanges="true">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".LakeInfoActivity"
+        android:elevation="20dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="5dp"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/addActivityText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/activitySpinner"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="Add new activity"
+                android:textSize="30sp"/>
+
+            <Spinner
+                android:id="@+id/activitySpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:minHeight="48dp"
+                app:layout_constraintBottom_toTopOf="@+id/dateTimeLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addActivityText" />
+
+
+            <LinearLayout
+                android:id="@+id/dateTimeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/activitySpinner"
+                app:layout_constraintBottom_toTopOf="@+id/addConfirmButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:layout_marginTop="30dp">
+
+                <Button
+                    android:id="@+id/pickDateButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pick date"
+                    android:layout_weight="1"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/timeSpentLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/activitySpinner"
+                    app:layout_constraintBottom_toTopOf="@+id/addConfirmButton"
+                    app:layout_constraintStart_toEndOf="@id/pickDateButton"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/timeSpentText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/timeSpentEditText"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:text="Set time spent"
+                        app:layout_constraintHorizontal_chainStyle="spread"/>
+
+                    <EditText
+                        android:id="@+id/timeSpentEditText"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:inputType="numberDecimal"
+                        android:minHeight="48dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/hText"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/timeSpentText"
+                        android:hint="0.0"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:id="@+id/hText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="h"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toEndOf="@+id/timeSpentEditText"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/timeSpentText"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/addConfirmButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="Save"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dateTimeLayout" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</ScrollView>
