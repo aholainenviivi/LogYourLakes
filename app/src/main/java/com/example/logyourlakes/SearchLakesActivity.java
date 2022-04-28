@@ -47,8 +47,8 @@ public class SearchLakesActivity extends AppCompatActivity {
                 if (finalListSearches.contains(s)) {
                     arrayAdapter.getFilter().filter(s);
                 } else {
-                    Toast.makeText(SearchLakesActivity.this, "No results for your search",
-                            Toast.LENGTH_LONG).show();
+                    //Toast.makeText(SearchLakesActivity.this, "No results for your search",
+                    //        Toast.LENGTH_LONG).show();
                 }
                 return false;
             }
